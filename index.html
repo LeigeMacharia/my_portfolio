@@ -56,13 +56,13 @@
         </nav>
     </header>
     <main>
-        <section class="hero-section">
+        <section class="hero_section">
             <h1>Hi, I'm Elijah</h1>
             <p>A Professional Frontend Developer</p>
             <p>My goal is to build beautiful, accessible and secure web apps.</p>
             <button>View My Work</button>
         </section>
-        <section class="about-me-section" id="about-me">
+        <section class="about_me_section" id="about-me">
             <div class="about-section">
                 <div class="about-section-image"><img src="assets/images/my-profile-removebg-preview.png" alt="My Potrait"></div>
                     <div class="bio-paragraph">
@@ -73,10 +73,13 @@
                 </div>
             </div>
         </section>
-        <section class="skills-section" id="skills">
+        <section class="skills_section" id="skills">
+            <div class="skills_heading">
+                <h2>My Expertise</h2>
+            </div>
             <div class="skills-container">
                 <div class="frontend-skills">
-                    <h2>Frontend</h2>
+                    <h3>Frontend</h3>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
@@ -87,7 +90,7 @@
                     </ul>
                 </div>
                 <div class="backend-skills">
-                    <h2>Backend</h2>
+                    <h3>Backend</h3>
                     <ul>
                         <li></li>
                         <li></li>
@@ -98,7 +101,7 @@
                     </ul>
                 </div>
                 <div class="fullstack-skills">
-                    <h2>Full Stack</h2>
+                    <h3>Full Stack</h3>
                     <ul>
                         <li></li>
                         <li></li>
@@ -109,7 +112,7 @@
                     </ul>
                 </div>
                 <div class="cybersecurity-skills">
-                    <h2>Cyber Security</h2>
+                    <h3>Cyber Security</h3>
                     <ul>
                         <li></li>
                         <li></li>
@@ -121,10 +124,12 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio-section" id="projects">
+        <section class="portfolio_section" id="projects">
             <h2 class="section_title">My Work</h2>
             <div class="portfolio1-container">
-                <img src="" alt="">
+                <div class="portfolio_image">
+                    <img src="" alt="">
+                </div>                
                 <h2>Project 1</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -136,7 +141,9 @@
                 <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
             </div>
             <div class="portfolio2-container">
-                <img src="" alt="">
+                <div class="portfolio_image">
+                    <img src="" alt="">
+                </div>
                 <h2>Crew Management Schedule</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -150,7 +157,9 @@
                 <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
             </div>
             <div class="portfolio3-container">
-                <img src="" alt="">
+                <div class="portfolio_image">
+                    <img src="" alt="">
+                </div>
                 <h2>E-Commerce Dashboard</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -164,7 +173,9 @@
                 <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
             </div>
             <div class="portfolio4-container">
-                <img src="" alt="">
+                <div class="portfolio_image">
+                    <img src="" alt="">
+                </div>
                 <h2>Social Media Dashboard</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -179,7 +190,9 @@
                 <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
             </div>
             <div class="portfolio5-container">
-                <img src="" alt="">
+                <div class="portfolio_image">
+                    <img src="" alt="">
+                </div>
                 <h2>Real Estate Listing</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -194,19 +207,27 @@
                 <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
             </div>
         </section>
-        <section class="contact-section" id="contact">
-            <div class="contact-container">
-                <h2>Contact Me</h2>
-                <button>Email Me<div class="icon-send"><i data-lucide="send"></i></button>
-                <button>LinkedIn<div class="icon-linkedin"><i data-lucide="linkedin"></i></button>
-                <button>Github<div class="icon-github"><i data-lucide="github"></i></button>
+        <section class="contact_section" id="contact">
+            <div class="contact_container">
+                <h2 class="contact_container">Contact Me</h2>
+                <a href="mailto:machariaelijah25@gmail.com" target="_blank">
+                    <button>Email Me<i data-lucide="send"></i></button>
+                </a>
+                <a href="" target="_blank">
+                    <button>LinkedIn<i data-lucide="linkedin"></i></button>
+                </a>
+                <a href="https://github.com/LeigeMacharia" target="_blank">
+                    <button>Github<i data-lucide="github"></i></button>
+                </a>
             </div>
         </section>
-        <footer>
-            &copy;Elijah Macharia 2025
-        </footer>
     </main>
-
+    <footer class="footer">
+        <p class="footer_text">
+            &copy; 2025 Elijah Macharia | Built with lots of <span><i data-lucide="coffee"></i></span>
+        </p>
+        <a href="#" class="footer_arrow"><i data-lucide="chevrons-up"></i></a>
+    </footer>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();

@@ -1,3 +1,16 @@
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 img {
     width: 100%;
     height: 100%;
@@ -7,4 +20,35 @@ img {
 .hero-section-img {
     padding: 20px;
     margin: 0 auto;
+}
+
+.hero_section {
+    background-color: grey;
+}
+
+.header {
+    background-color: grey;
+}
+
+.about_me_section {
+    background-color: grey;
+}
+
+.skills_section {
+    background-color: grey;
+}
+
+.portfolio_section {
+    background-color: grey;
+}
+
+.contact_section {
+    background-color: grey;
+}
+
+.footer {
+    background: grey;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px auto;
 }
