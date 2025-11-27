@@ -10,40 +10,66 @@ html {
   scroll-behavior: smooth;
 }
 
+.header {
+    width: 720px;
+    height: auto;
+    padding: 10px;
+    margin: 20px auto;
+    flex: none;
+    border: none 1px transparent;
+    border-radius: 999px;
+    background-color: #333;
+    position: fixed;
+
+}
+
+.logo_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_list {
+    list-style: none;
+}
+
+.nav_list, .nav_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_list a {
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+.about-me_container,
+.skills_container,
+.projects_container,
+.contact_container {
+    background: whitesmoke;
+    padding: 5px;
+    border-radius: 30px;
+    color: black;
+}
+
+.nav_list a{
+    color: black;
+}
 
 img {
     width: 100%;
     height: 100%;
     border-radius: 12px;
-}
-
-.hero-section-img {
-    padding: 20px;
-    margin: 0 auto;
-}
-
-.hero_section {
-    background-color: grey;
-}
-
-.header {
-    background-color: grey;
-}
-
-.about_me_section {
-    background-color: grey;
-}
-
-.skills_section {
-    background-color: grey;
-}
-
-.portfolio_section {
-    background-color: grey;
-}
-
-.contact_section {
-    background-color: grey;
 }
 
 .footer {

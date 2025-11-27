@@ -12,6 +12,7 @@
     <!-- Open Graph Meta Tags (Useful for social sharing)-->
     <meta property="og:title" content="Elijah Macharia - Frontend Developer">
     <meta property="og:description" content="Frontend Developer specializing in React, Next.js, Typescript and modern web technologies">
+    <meta property="og:image" content="assets/images/my-profile-removebg-preview">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://leigemacharia.github.io/portfolio-website">
 
@@ -29,50 +30,47 @@
     <!-- Stylesheet-->
      <link rel="stylesheet" href="styles.css">
 
-    <title>Elijah Macharia | Personal Porfolio</title>
+    <title>Elijah Macharia | Personal Portfolio</title>
     
 </head>
 <body>
     <header class="header">
-        <nav class="nav-container">
-            <div class="logo-container">
-                <div class="icon-braces"><i data-lucide="braces"></i></div>
+        <nav class="nav_container" aria-label="Main Navigation">
+            <div class="logo_container">
+                <i data-lucide="braces"></i>
                 <a href="#">EM</a>
             </div>
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="#about-me">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact">Contact</a>
-                </li>
+            <ul class="nav_list">
+                <li class="nav_item about-me_container"><a href="#about-me">About Me</a></li>
+                <li class="nav_item skills_container"><a href="#skills">Skills</a></li>
+                <li class="nav_item projects_container"><a href="#projects">Projects</a></li>
+                <li class="nav_item contact_container"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+
+    <main id="main-content">
         <section class="hero_section">
             <h1>Hi, I'm Elijah</h1>
             <p>A Professional Frontend Developer</p>
             <p>My goal is to build beautiful, accessible and secure web apps.</p>
-            <button>View My Work</button>
+            <a href="#projects" class="btn">
+                View My Work
+            </a>
         </section>
+
         <section class="about_me_section" id="about-me">
             <div class="about-section">
-                <div class="about-section-image"><img src="assets/images/my-profile-removebg-preview.png" alt="My Potrait"></div>
-                    <div class="bio-paragraph">
-                        <p>Hi, I'm Elijah Macharia. A nerd who just loves seeing code turn into something beautiful. I'm a self-taught Frontend Developer on the rightful path of becoming a Security-focused Full Stack Engineer.</p>
-                        <p>I enjoy learning and discovering new stuff everyday. I have challenged myself by reading technical documentations and get my hands dirty and not be afraid of failing. That will be shown in my projects.</p>
-                        <p>I have a particular interest in working in aviation, finance and real estate. They have fascinated me for the longest time and would like to solve several problems using code.</p>
-                    </div>
+                <div class="about-section-image"><img src="assets/images/my-profile-removebg-preview.png" alt="My Portrait">
+                </div>
+                <div class="bio-paragraph">
+                    <p>Hi, I'm Elijah Macharia. A nerd who just loves seeing code turn into something beautiful. I'm a self-taught Frontend Developer on the rightful path of becoming a Security-focused Full Stack Engineer.</p>
+                    <p>I enjoy learning and discovering new stuff everyday. I have challenged myself by reading technical documentations and get my hands dirty and not be afraid of failing. That will be shown in my projects.</p>
+                    <p>I have a particular interest in working in aviation, finance and real estate. They have fascinated me for the longest time and would like to solve several problems using code.</p>
                 </div>
             </div>
         </section>
+
         <section class="skills_section" id="skills">
             <div class="skills_heading">
                 <h2>My Expertise</h2>
@@ -92,44 +90,30 @@
                 <div class="backend-skills">
                     <h3>Backend</h3>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>COMING SOON</li>
                     </ul>
                 </div>
                 <div class="fullstack-skills">
                     <h3>Full Stack</h3>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>COMING SOON</li>
                     </ul>
                 </div>
                 <div class="cybersecurity-skills">
                     <h3>Cyber Security</h3>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>COMING SOON</li>
                     </ul>
                 </div>
             </div>
         </section>
+
         <section class="portfolio_section" id="projects">
             <h2 class="section_title">My Work</h2>
-            <div class="portfolio1-container">
-                <div class="portfolio_image">
-                    <img src="" alt="">
-                </div>                
+            <article class="project_card">
+                <figure class="portfolio_image">
+                    <img src="" alt="Project 1 preview" loading="lazy">
+                </figure>                
                 <h2>Project 1</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -138,12 +122,16 @@
                     <li>CSS</li>
                     <li>JS</li>
                 </ul>
-                <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
-            </div>
-            <div class="portfolio2-container">
-                <div class="portfolio_image">
-                    <img src="" alt="">
-                </div>
+                <a href="" class="project_btn" target="_blank">
+                    Live Demo
+                    <i data-lucide="square-arrow-up-right">
+                    </i>
+                </a>
+            </article>
+            <article class="project_card">
+                <figure class="portfolio_image">
+                    <img src="" alt="Project 1 preview" loading="lazy">
+                </figure>
                 <h2>Crew Management Schedule</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -154,12 +142,16 @@
                     <li>Vite</li>
                     <li>Zustand</li>
                 </ul>
-                <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
-            </div>
-            <div class="portfolio3-container">
-                <div class="portfolio_image">
-                    <img src="" alt="">
-                </div>
+                <a href="" class="project_btn" target="_blank">
+                    Live Demo
+                    <i data-lucide="square-arrow-up-right">
+                    </i>
+                </a>
+            </article>
+            <article class="project_card">
+                <figure class="portfolio_image">
+                    <img src="" alt="Project 1 preview" loading="lazy">
+                </figure>
                 <h2>E-Commerce Dashboard</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -170,12 +162,16 @@
                     <li>shadcn/ui</li>
                     <li>TanStack Query</li>
                 </ul>
-                <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
-            </div>
-            <div class="portfolio4-container">
-                <div class="portfolio_image">
-                    <img src="" alt="">
-                </div>
+                <a href="" class="project_btn" target="_blank">
+                    Live Demo
+                    <i data-lucide="square-arrow-up-right">
+                    </i>
+                </a>
+            </article>
+            <article class="project_card">
+                <figure class="portfolio_image">
+                    <img src="" alt="Project 1 preview" loading="lazy">
+                </figure>
                 <h2>Social Media Dashboard</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -187,12 +183,16 @@
                     <li>TanStack Query</li>
                     <li>NextAuth</li>
                 </ul>
-                <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
-            </div>
-            <div class="portfolio5-container">
-                <div class="portfolio_image">
-                    <img src="" alt="">
-                </div>
+                <a href="" class="project_btn" target="_blank">
+                    Live Demo
+                    <i data-lucide="square-arrow-up-right">
+                    </i>
+                </a>
+            </article>
+            <article class="project_card">
+                <figure class="portfolio_image">
+                    <img src="" alt="Project 1 preview" loading="lazy">
+                </figure>
                 <h2>Real Estate Listing</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
                 <h3>Tech Stack</h3>
@@ -204,30 +204,42 @@
                     <li>Mapbox</li>
                     <li>NextAuth</li>
                 </ul>
-                <button>Live Demo<div class="icon-square-arrow-up-right"><i data-lucide="square-arrow-up-right"></i></div></button>
-            </div>
+                <a href="" class="project_btn" target="_blank">
+                    Live Demo
+                    <i data-lucide="square-arrow-up-right">
+                    </i>
+                </a>
+            </article>
         </section>
+
         <section class="contact_section" id="contact">
             <div class="contact_container">
-                <h2 class="contact_container">Contact Me</h2>
-                <a href="mailto:machariaelijah25@gmail.com" target="_blank">
-                    <button>Email Me<i data-lucide="send"></i></button>
+                <h2>Contact Me</h2>
+                <a href="mailto:machariaelijah25@gmail.com" target="_blank" class="btn">
+                        Email Me
+                        <i data-lucide="send"></i>
                 </a>
-                <a href="" target="_blank">
-                    <button>LinkedIn<i data-lucide="linkedin"></i></button>
+                <a href="" target="_blank" class="btn">
+                        LinkedIn
+                        <i data-lucide="linkedin"></i>
                 </a>
-                <a href="https://github.com/LeigeMacharia" target="_blank">
-                    <button>Github<i data-lucide="github"></i></button>
+                <a href="https://github.com/LeigeMacharia" target="_blank" class="btn">
+                        Github
+                        <i data-lucide="github"></i>
                 </a>
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <p class="footer_text">
             &copy; 2025 Elijah Macharia | Built with lots of <span><i data-lucide="coffee"></i></span>
         </p>
-        <a href="#" class="footer_arrow"><i data-lucide="chevrons-up"></i></a>
+        <a href="#" class="footer_arrow">
+            <i data-lucide="chevrons-up"></i>
+        </a>
     </footer>
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
