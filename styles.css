@@ -77,7 +77,7 @@ body {
     backdrop-filter: none;
 }
 
-.nav-container {
+/*.nav-container {
     max-width: 1200px;
     margin: 0 auto;
     padding-inline: var(--header-padding-inline);
@@ -86,10 +86,12 @@ body {
     align-items: center;
     height: 100%;
 }
+*/
 
 .nav-logo img{
    width: 100%;
-    
+   display: flex;
+   justify-content: flex-start;
 }
 
 
