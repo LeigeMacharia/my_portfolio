@@ -27,7 +27,7 @@ const navList = document.querySelector('.nav-list');
 navToggle.addEventListener('click', () => {
     navList.classList.toggle('is-open');
 
-    const isExpanded = navToggle.getAttribute(aria-expanded) === 'true';
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', !isExpanded);
 })
 
