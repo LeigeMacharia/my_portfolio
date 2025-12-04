@@ -68,5 +68,72 @@ navLinks.forEach(link => {
     });
 });
 
+// About Me Carousel
+
+const bioCards = document.querySelector('.bio-cards');
+const carouselDots = document.querySelector('.carousel-dots');
+const aboutCards = document.querySelectorAll('.about-card');
+
+// Only run on mobile
+
+if (window.innerWidth < 768 && bioCards && carouselDots) {
+
+    // Create dots based on the number of cards
+    aboutCards.forEach((card, index) => {
+        const dot = document.createElement('button');
+        dot.classList.add('dot');
+        dot.setAttribute('aria-label', `Go to card ${index + 1}`);
+
+        // Set first dot as active
+        if (index === 0) {
+            dot.classList.add('active');
+        }
+
+        // Click dot to scroll to card
+        dot.addEventListener('click', () => {
+            card.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
+        });
+
+        carouselDots.appendChild(dot);
+    });
+
+    //Update active dot on scroll
+
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+
+    bioCards.addEventListener('scroll', () => {
+        const scrollPosition = bioCards.scrollLeft;
+        const cardWidth = aboutCards[0].offsetWidth;
+        const gap = parseInt(getComputedStyle(bioCards).gap);
+        const activeIndex = Math.round(scrollPosition / (cardWidth + gap));
+
+        // Update dots
+        dots.forEach((dot, index) => {
+            if (index === activeIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    });
+}
+
+// Reinitialize on window resize
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        // Removes dots if switching to desktop
+
+        if (window.innerWidth >= 768) {
+            carouselDots.innerHTML = '';
+        }
+    }, 250);
+});
 
 lucide.createIcons();
