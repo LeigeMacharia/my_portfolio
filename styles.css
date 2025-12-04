@@ -59,10 +59,21 @@
     --radius-header: 1.5rem;
     --radius-small: 0.25rem;
 
-    /* Cards Color */
-    --color-card-light: rgba(255, 255, 255, 0.08);
-    --color-card-dark: rgba(255, 255, 255, 0.02);
-
+    /* About section Specific */
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-border: rgba(191, 198, 206, 0.3);
+    --card-shadow: 0 8px 24px rgba(10, 15, 31, 0.08);
+    --card-shadow-hover: 0 12px 32px rgba(10, 15, 31, 0.12);
+    
+    /* Highlight/Accent */
+    --highlight-bg: rgba(200, 184, 146, 0.1);
+    --highlight-icon-size: 40px;
+    
+    /* Carousel Dots */
+    --dot-size: 8px;
+    --dot-active-width: 24px;
+    --dot-color: var(--color-border);
+    --dot-active-color: var(--color-accent);
 }
 
 html {
@@ -580,23 +591,15 @@ section[id] {
 .about-card {
     min-width: 85vw;
     scroll-snap-align: center;
-    background: linear-gradient(
-        to bottom, 
-        rgba(230, 233, 238, 0.9),
-        rgba(255, 255, 255, 0.8)
-        );
-    box-shadow: 0 8px 24px rgba(10, 15, 31, 0.08);
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
     border-radius: var(--radius-header);
-    border: 1px solid rgba(191, 198, 206, 0.3);
+    border: var(--card-border);
     backdrop-filter: blur(10px);
     padding: var(--space-600);
-    /* line-height: 1.65;
-    letter-spacing: 0.3px;
-    */
     transition: 
         transform 0.35s ease, 
         box-shadow 0.35s ease,
-        /*background 0.35s ease;*/
 }
 
 @media (min-width: 768px) {
@@ -607,12 +610,7 @@ section[id] {
 
     .about-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    /*background: linear-gradient(
-        to bottom,
-        var(--color-border)
-        var(--color-primary-light)
-    );*/
+    box-shadow: var(--card-shadow-hover);
 }
 }
 
@@ -653,7 +651,7 @@ section[id] {
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--color-accent);
+    background: var(--highlight-bg);
     opacity: 0.3;
 }
 
@@ -677,7 +675,7 @@ section[id] {
     align-items: center;
     gap: var(--space-300);
     padding: var(--space-300);
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--color-border);
     border-radius: 12px;
     transition: all 0.3s ease;
 }
@@ -727,16 +725,16 @@ section[id] {
 }
 
 .carousel-dots .dot {
-    width: 8px;
-    height: 8px;
-    background: var(--color-border);
+    width: var(--dot-size);
+    height: var(--dot-size);
+    background: var(--dot-color);
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .carousel-dots .dot.active {
-    width: 24px;
-    background: var(--color-accent);
+    width: var(--dot-active-width);
+    background: var(--dot-active-color);
     border-radius: 4px;
 }
