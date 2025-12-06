@@ -738,3 +738,24 @@ section[id] {
     background: var(--dot-active-color);
     border-radius: 4px;
 }
+
+.skill-section {
+    background: linear-gradient(
+        to bottom,
+        var(--color-bg),
+        var(--color-border)
+    );
+    padding: var(--space-800) var(--space-400);
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .skill-section {
+        padding: var(--space-900) var(--space-700);
+    }
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0;
+}
