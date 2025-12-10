@@ -371,107 +371,123 @@
         </section>
 
         <section class="portfolio-section" id="projects">
-            <h2 class="section-title">My Work</h2>
-            <article class="project-card">
-                <figure class="portfolio-image">
-                    <img src="assets/images/600x400.svg" alt="Project placeholder" loading="lazy">
-                </figure>                
-                <h2>Project 1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
-                <h3>Tech Stack</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JS</li>
-                </ul>
-                <a href="" class="project-btn" target="_blank">
-                    Live Demo
-                    <i data-lucide="square-arrow-up-right">
-                    </i>
-                </a>
-            </article>
-            <article class="project-card">
-                <figure class="portfolio-image">
-                    <img src="assets/images/600x400.svg" alt="Project placeholder" loading="lazy">
-                </figure>
-                <h2>Crew Management Schedule</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
-                <h3>Tech Stack</h3>
-                <ul>
-                    <li>React</li>
-                    <li>Typescript</li>
-                    <li>Tailwind</li>
-                    <li>Vite</li>
-                    <li>Zustand</li>
-                </ul>
-                <a href="" class="project-btn" target="_blank">
-                    Live Demo
-                    <i data-lucide="square-arrow-up-right">
-                    </i>
-                </a>
-            </article>
-            <article class="project-card">
-                <figure class="portfolio-image">
-                    <img src="assets/images/600x400.svg" alt="Project placeholder" loading="lazy">
-                </figure>
-                <h2>E-Commerce Dashboard</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
-                <h3>Tech Stack</h3>
-                <ul>
-                    <li>Next.js</li>
-                    <li>TypeScript</li>
-                    <li>Tailwind</li>
-                    <li>shadcn/ui</li>
-                    <li>TanStack Query</li>
-                </ul>
-                <a href="" class="project-btn" target="_blank">
-                    Live Demo
-                    <i data-lucide="square-arrow-up-right">
-                    </i>
-                </a>
-            </article>
-            <article class="project-card">
-                <figure class="portfolio-image">
-                    <img src="assets/images/600x400.svg" alt="Project placeholder" loading="lazy">
-                </figure>
-                <h2>Social Media Dashboard</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
-                <h3>Tech Stack</h3>
-                <ul>
-                    <li>Next.js</li>
-                    <li>TypeScript</li>
-                    <li>Tailwind</li>
-                    <li>shadcn/ui</li>
-                    <li>TanStack Query</li>
-                    <li>NextAuth</li>
-                </ul>
-                <a href="" class="project-btn" target="_blank">
-                    Live Demo
-                    <i data-lucide="square-arrow-up-right">
-                    </i>
-                </a>
-            </article>
-            <article class="project-card">
-                <figure class="portfolio-image">
-                    <img src="assets/images/600x400.svg" alt="Project placeholder" loading="lazy">
-                </figure>
-                <h2>Real Estate Listing</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam vitae maxime ab saepe hic? Esse optio quo illum eligendi distinctio. Unde consequuntur ea repudiandae voluptatem natus optio eius! Reiciendis.</p>
-                <h3>Tech Stack</h3>
-                <ul>
-                    <li>React</li>
-                    <li>TypeScript</li>
-                    <li>Tailwind</li>
-                    <li>TanStack Query</li>
-                    <li>Mapbox</li>
-                    <li>NextAuth</li>
-                </ul>
-                <a href="" class="project-btn" target="_blank">
-                    Live Demo
-                    <i data-lucide="square-arrow-up-right">
-                    </i>
-                </a>
-            </article>
+            <div class="portfolio-container">
+                <!-- Section Header -->
+                <div class="portfolio-header">
+                    <h2 class="section-title">My Work</h2>
+                    <p class="portfolio-website">Crafting solutions across industries</p>
+                </div>
+                <!-- Category Filter-->
+                <nav class="portfolio-filter" aria-label="Project categories">
+                    <button class="filter-btn active" data-category="all">
+                        All Projects
+                    </button>
+                    <button class="filter-btn" data-category="aviation">
+                        <i data-lucide="plane"></i>
+                        Aviation
+                    </button>
+                    <button class="filter-btn" data-category="aviation">
+                        <i data-lucide="banknote"></i>
+                        Finance
+                    </button>
+                    <button class="filter-btn" data-category="aviation">
+                        <i data-lucide="building-2"></i>
+                        Real Estate
+                    </button>
+                </nav>
+                 <!-- Project Stack-->
+                  <div class="project-wrapper">
+                        <!-- Project Card 1-->
+                        <article class="project-card" data-category="finance">
+                            <div class="project-content">
+                                <h3 class="project-title">E-Commerce Dashboard</h3>
+                                <p class="project-description">
+                                    A comprehensive e-commerce analytics dashboard built with modern technologies. Features real-time data visualization, inventory management and customer insights.
+                                </p>  
+                                <div class="tech-stack">
+                                    <h4>Tech Stack</h4>
+                                    <div class="tech-pills">
+                                        <span class="tech-pill">Next.js</span>
+                                        <span class="tech-pill">TypeScript</span>
+                                        <span class="tech-pill">Tailwind</span>
+                                        <span class="tech-pill">shadcn/ui</span>
+                                        <span class="tech-pill">Tanstack Query</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-visual">
+                                <figure class="project-image">
+                                    <img src="assets/images/600x400.svg" alt="E-Commerce Dashboard preview" loading="lazy">
+                                </figure>
+                                <a href="" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                    Live Demo
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 2-->
+                        <article class="project-card" data-category="aviation">
+                            <div class="project-content">
+                                <h3 class="project-title">Crew Management System</h3>
+                                <p class="project-description">
+                                    An aviation crew scheduling and management platform. Optimizes crew assignments, tracks certifications and ensure regulatory compliance.
+                                </p>  
+                                <div class="tech-stack">
+                                    <h4>Tech Stack</h4>
+                                    <div class="tech-pills">
+                                        <span class="tech-pill">React</span>
+                                        <span class="tech-pill">TypeScript</span>
+                                        <span class="tech-pill">Tailwind</span>
+                                        <span class="tech-pill">Vite</span>
+                                        <span class="tech-pill">Zustand</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-visual">
+                                <figure class="project-image">
+                                    <img src="assets/images/600x400.svg" alt="Crew Management System preview" loading="lazy">
+                                </figure>
+                                <a href="" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                    Live Demo
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 3-->
+                        <article class="project-card" data-category="real-estate">
+                            <div class="project-content">
+                                <h3 class="project-title">Real Estate Listings Platform</h3>
+                                <p class="project-description">
+                                    A modern property listing platform with interactive maps, advance search filters and virtual tour capabilities. Connects buyers with their dream homes.
+                                </p>  
+                                <div class="tech-stack">
+                                    <h4>Tech Stack</h4>
+                                    <div class="tech-pills">
+                                        <span class="tech-pill">React</span>
+                                        <span class="tech-pill">TypeScript</span>
+                                        <span class="tech-pill">Tailwind</span>
+                                        <span class="tech-pill">Tanstack Query</span>
+                                        <span class="tech-pill">Mapbox</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-visual">
+                                <figure class="project-image">
+                                    <img src="assets/images/600x400.svg" alt="Real Estate Platform preview" loading="lazy">
+                                </figure>
+                                <a href="" class="project-btn" target="_blank" rel="noopener noreferrer">
+                                    Live Demo
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                        </article>
+                  </div>
+            </div>
         </section>
 
         <section class="contact-section" id="contact">

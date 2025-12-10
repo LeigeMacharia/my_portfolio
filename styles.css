@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
 }
 
 :root {
@@ -102,10 +101,7 @@ body {
                 background var(--header-transition),
                 box-shadow var(--header-transition),
                 backdrop-filter var(--header-transition),
-                margin var(--header-transition),
-                width var(--header-transition),
-                border-radius var(--header-transition),
-                transform var(--header-transition); 
+                 
 }
 
 .header.header--scrolled {
@@ -114,11 +110,6 @@ body {
     -webkit-backdrop-filter: blur(var(--header-backdrop-blur));
     box-shadow: var(--header-shadow);
     border: 1px solid rgba(191, 198, 206, 0.3);
-    border-radius: var(--radius-header);
-    margin: var(--space-300) auto 0;
-    width: calc(100% - (var(--space-300) * 2));
-    left: var(--space-300);
-    right: var(--space-300);
 }
 
 @media (max-width: 768px) {
@@ -126,15 +117,12 @@ body {
         height: var(--header-height-desktop);
     }
     .header.header--scrolled {
-        margin-top: var(--space-500);
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 0;
-        padding-inline: var(--space-600);
+        border-radius: var(--radius-header);
+        margin: var(--space-500) auto 0;
         width: 92%;
         max-width: 1100px;
-        left: auto;
-        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -303,24 +291,16 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    
-    /* ✅ Position relative to header */
-    top: calc(var(--header-height-mobile) + var(--space-300)); /* Below scrolled header */
-    left: 50%;
-    transform: translateX(-50%); /* Center it */
-    
-    /* ✅ Match header width when scrolled */
-    width: calc(100% - (var(--space-300) * 2));
-    max-width: calc(100vw - (var(--space-300) * 2));
-    
+    top: var(--header-height-mobile);
+    left: 0;
+    right: 0;
+    width: 100%;
     background: var(--header-bg-opaque);
     backdrop-filter: blur(var(--header-backdrop-blur));
     -webkit-backdrop-filter: blur(var(--header-backdrop-blur));
     padding: var(--space-600) var(--space-400);
     gap: var(--space-300);
     box-shadow: 0 4px 20px rgba(10, 15, 31, 0.15);
-    border-radius: var(--radius-header); /* ✅ Full radius since it's separate */
-    animation: slideDown 0.3s ease-out;
     box-sizing: border-box;
     z-index: 999;
 }
