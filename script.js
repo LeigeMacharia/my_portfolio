@@ -136,4 +136,115 @@ window.addEventListener('resize', () => {
     }, 250);
 });
 
+
+// ==========================================
+// PORTFOLIO CATEGORY FILTER
+// ==========================================
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+const projectsWrapper = document.querySelector('.projects-wrapper');
+
+// Create "no projects" message element
+const noProjectsMessage = document.createElement('div');
+noProjectsMessage.className = 'no-projects';
+noProjectsMessage.innerHTML = `
+    <p>No projects found in this category yet.</p>
+    <button onclick="showAllProjects()">
+        <i data-lucide="grid-3x3"></i>
+        View All Projects
+    </button>
+`;
+projectsWrapper.parentElement.appendChild(noProjectsMessage);
+
+// Filter function
+function filterProjects(category) {
+    let visibleCount = 0;
+    
+    projectCards.forEach((card, index) => {
+        const cardCategory = card.getAttribute('data-category');
+        
+        if (category === 'all' || cardCategory === category) {
+            // Show card with staggered animation
+            card.classList.remove('hidden');
+            card.classList.add('visible');
+            card.style.animationDelay = `${index * 0.1}s`;
+            visibleCount++;
+        } else {
+            // Hide card
+            card.classList.add('hidden');
+            card.classList.remove('visible');
+        }
+    });
+    
+    // Show "no projects" message if no cards visible
+    if (visibleCount === 0) {
+        noProjectsMessage.classList.add('show');
+    } else {
+        noProjectsMessage.classList.remove('show');
+    }
+}
+
+// Add click listeners to filter buttons
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Get category and filter
+        const category = button.getAttribute('data-category');
+        filterProjects(category);
+        
+        // Update aria-label for accessibility
+        button.setAttribute('aria-pressed', 'true');
+        filterButtons.forEach(btn => {
+            if (btn !== button) {
+                btn.setAttribute('aria-pressed', 'false');
+            }
+        });
+    });
+});
+
+// Function to show all projects (called from "View All" button)
+function showAllProjects() {
+    const allButton = document.querySelector('[data-category="all"]');
+    allButton.click();
+}
+
+// Initialize: Show all projects on page load
+filterProjects('all');
+
+// ==========================================
+// STICKY SCROLL EFFECT ENHANCEMENTS
+// ==========================================
+
+// Only run on desktop
+if (window.innerWidth >= 768) {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    // Add scroll-based scale effect
+    window.addEventListener('scroll', () => {
+        projectCards.forEach((card, index) => {
+            const rect = card.getBoundingClientRect();
+            const distanceFromTop = rect.top;
+            
+            // Calculate scale based on position
+            const scale = Math.max(0.85, 1 - (index * 0.02));
+            
+            // Apply transform when card is sticking
+            if (distanceFromTop <= 120) {
+                card.style.transform = `scale(${scale})`;
+                card.style.opacity = '0.9';
+            } else {
+                card.style.transform = 'scale(1)';
+                card.style.opacity = '1';
+            }
+        });
+    });
+}
+
+// Reinitialize Lucide icons after adding "no projects" button
 lucide.createIcons();
