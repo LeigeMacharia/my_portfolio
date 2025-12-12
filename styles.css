@@ -1117,6 +1117,7 @@ section[id] {
 .portfolio-title {
     font-family: var(--font-heading);
     font-size: var(--fs-800);
+    font-weight: 600;
     color: var(--text-main);
     margin-bottom: var(--space-300);
 }
@@ -1221,7 +1222,7 @@ section[id] {
 .projects-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-700);
+    gap: var(--space-500);
 }
 
 @media (min-width: 768px) {
@@ -1247,7 +1248,7 @@ section[id] {
     transition: 
         transform 0.3s ease,
         box-shadow 0.3s ease;
-    margin-bottom: var(--space-700);
+    margin-bottom: var(--space-500);
 }
 
 .project-card:nth-child(1) {
